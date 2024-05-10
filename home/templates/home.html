@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center" style="margin: 24px;" >Welcome to the posts root page</h1>
+{% for post in posts %}
+<div class="text-center">
+    <h4 class="text-center">{{ post.title }}</h4>
+    <small>{{ post.date }}</small>
+    <p>{{ post.description}}</p>
+</div>
+{% endfor %}
+{% endblock %}
