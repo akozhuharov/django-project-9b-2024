@@ -1,8 +1,8 @@
-from django.contrib import admin
+from django.contrib.auth.decorators import login_required
 from django.urls import path
 from . import views
 urlpatterns = [
     path("", views.index),
     path("contact/", views.contact),
-    path("create/", views.CreatePostView.as_view())
+    path("create/", login_required(views.CreatePostView.as_view()))
 ]
