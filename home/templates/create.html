@@ -2,7 +2,7 @@
 {% block content %}
 <h1 class="text-center" style="margin: 24px;" >Create a post</h1>
 <div class="col-md-4 offset-md-4">
-    <form action="/create/">
+    <form method="POST" action="/create/">
         {% csrf_token %}
         {{ form }}
         <div class="d-grid gap-2 mt-3">
